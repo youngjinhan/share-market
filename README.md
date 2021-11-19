@@ -5,7 +5,7 @@
 node.js 설치 후
 
 cd server/<br>
-npm init <br>
+npm install <br>
 
 ### 실행 방법
 
