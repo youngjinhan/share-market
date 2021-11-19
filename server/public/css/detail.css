@@ -1,0 +1,83 @@
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#briefly{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+    background: #ededed;
+}
+
+#brief_table{
+    margin-left:auto;
+    margin-right:auto;
+    padding: 5px;
+    width: 100%;
+}
+
+#brief_table td {
+    padding: 10px;
+}
+
+.detail_{
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.cols{
+    color:gray;
+}
+
+.buts{
+    padding: 5px;
+    margin: 5px;
+
+}
+
+textarea{
+    resize:none;
+}
+
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul.tabs li{
+    background: none;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+ul.tabs li.current{
+    background: #ededed;
+}
+
+.tab-link.current{
+    font-weight: bold;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 10px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+.inquire_input {
+    margin-top: 5px;
+}
+
+.inquire_row {
+    font-size: 15px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,53 @@
+@font-face {
+    src: url('../fonts/SCDream3.ttf');
+    font-family: "score";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+@media only screen {
+    body {
+        margin: 0;
+        max-width: 100%;
+        color: black;
+    }
+}
+body {
+    line-height: 1.5;
+}
+@page {
+	margin: 1in;
+    color: black;
+}
+
+.intro_bg {
+    background: url('../image/reallwinter.jpg') no-repeat 50% 10% /cover;
+    padding: 110px 0;
+    width: 100%;
+}
+
+.area {
+    text-align: center;
+}
+
+.area > h2{
+    font-family: "score";
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+    
+}
+
+.area > h3 {
+    font-family: "score";
+    color: #000;
+}
+
+#user_img {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}

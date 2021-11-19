@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>0Uni 마켓</title>
+        <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+        <link rel="stylesheet" type="text/css" href="css/product.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/connectByKeyword.js"></script>
+    </head>
+    <style>
+        #write_buttons {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            float: right;
+        }
+
+        .Footer {
+            margin-top: 7%;;
+            margin-left: 20%;
+            height: 2.5rem;
+            font-size: 10px;
+            text-align: center;
+            color: black;
+        }
+    </style>
+    <script type="text/javascript">
+        function change() {
+            var keyword = document.getElementById("search").value;
+            var target = document.getElementById("filter");
+            var category = target.options[target.selectedIndex].value;
+
+            if (keyword == "") {
+                alert("Enter keyword first.");
+                location.href="index.html"; 
+            } else {
+                if (category == "default") {
+                    alert("default");
+                    
+                } else {
+                    alert(category);
+                }
+                // DB 작업
+                location.href="searchResult.html";    
+            }                    
+        };
+    </script>
+    <body>
+        <header> <!--헤더-->
+            <div id="title">
+                <div class="logo"><a href="index.html"><img src="image/logo.png" alt="로고 이미지" width=300 height="86px"></a></div>
+                <div class="searchbox">
+                    <table class="searchbox_content">
+                        <tr>
+                            <td style="width: 70%;">
+                                <input type="text" id="search" name="search" placeholder="입력하세요" style="width: 95%;"
+                                    onKeypress="javascript:if(event.keyCode==13) {change()}" />
+                            </td>
+                            <td style="width: 17%;">
+                                <form name="selection">
+                                    <p>
+                                        <select id="filter" size="1">
+                                            <option value="default" selected>필터</option>
+                                            <option value="university">대학</option>
+                                            <option value="distance">거리순</option>
+                                        </select>
+                                    </p>
+                                </form>
+                            </td>
+                            <td style="width: 13%;"><input type="button" onclick="change()" value="Search"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="information">
+                    <ul>
+                        <li><a href="myPage.html">My page</a></li>
+                        <li><a href="write.html">글쓰기</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <nav> <!--메뉴바-->
+            <div id="menubar">
+                <ul>
+                 <li>
+                     <a class="menu sharemenu" href="searchResult.html?name=default">대여</a>
+                     <div id="semimenu-share">
+                         <div><a href="searchResult.html?name=book">책</a></div>
+                         <div><a href="searchResult.html?name=homeAppliance">가전</a></div>
+                         <div><a href="searchResult.html?name=cloth">완구</a></div>
+                     </div>
+                 </li>
+                 <li>
+                     <a class="menu buymenu" href="searchResult.html?name=default">공구</a>
+                 </li>
+                 <li><a class="menu carpoolmenu" href="carPool.html?name=default">카풀</a>
+                     <div id="semimenu-carpool">
+                         <div><a href="carPool.html?name=ownCar">자차</a></div>
+                         <div><a href="carPool.html?name=taxi">택시</a></div>
+                     </div>
+                 </li>
+                 <li><a class="menu sellmenu" href="searchResult.html">판매</a></li>
+                 <li><a class="menu" href="aboutus.html">About us</a></li>
+                </ul>
+            </div>
+         </nav>
+    <article class="page sans" style="margin-top: 5%;">
+        <form>
+            <table style="width: 90%; height: 30em; margin-left: 5%; margin-right: 5%;">
+                <tr style="height: 10%;">
+                    <td style="width: 10%;">Title : </td>
+                    <td style="width: 80%;">
+                    <input id="title" type="text" style="width: 100%; height: 60%;">
+                    </td>
+                </tr>
+                <tr style="height: 80%;">
+                    <td style="width: 10%;">Content : </td>
+                    <td style="width: 80%;">
+                        <input id="content" type="text" style="width: 100%; height: 100%; vertical-align: top;">
+                    </td>
+                </tr>
+            </table>
+            <div id="write_buttons">
+                <button type="button" style="margin-right: 5px;" onclick="submitW(this.form)"><span style="font-size: 15px;">Submit</span></button>
+                <button type="button" style="margin-right: 10px;" onclick="cancel()"><span style="font-size: 15px;">Cancel</span></button>
+            </div>
+        </form>
+    </article>
+</body>
+<footer class="Footer">
+    <p>Copyright ©2% All rights reserved.</p>
+</footer>
+</html>

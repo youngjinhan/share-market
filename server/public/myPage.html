@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>0Uni 마켓</title>
+        <link rel="stylesheet" type="text/css" href="css/mypagestyle.css">
+        <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+        <link rel="stylesheet" type="text/css" href="css/product.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+    </head>
+    <body>
+        <header> <!--헤더-->
+            <div id="title">
+                <div class="logo"><a href="index.html"><img src="image/logo.png" alt="로고 이미지" width=250 height="78px"></a></div>
+                <div class="searchbox">
+                    <table class="searchbox_content">
+                        <tr>
+                            <td style="width: 80%;">
+                                <input type="text" name="search" placeholder="입력하세요" style="width: 95%;"
+                                    onKeypress="javascript:if(event.keyCode==13) {reviewSubmit(this.form)}" />
+                            </td>
+                            <td style="width: 7%;"><input type="button" name="filter" value="필터"/></td>
+                            <td style="width: 13%;"><input type="button" onClick="reviewSubmit(this.form)" value="Search"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="information">
+                    <ul>
+                        <li><a href="#">My page</a></li>
+                        <li><a href="#">글쓰기</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="wrap">
+            <div class="intro_bg">
+                <div class="area">
+                    <h1>My page</h1>
+                    <img id="user_img" src="image/face.png" style="text-align: center; width: 400px; height: 300px; border-style: dashed;">
+                    <h3>접속한 계정: pinksooin</h3><br>
+                    <input type="button" name="list" value="내가 찜한 목록 보기">
+                    <input type="button" name="list" value="회원 정보 변경 하기">
+                    <input type="button" name="list" value="탈퇴하기">
+                </div>
+            </div>
+    </body>
+</html>
